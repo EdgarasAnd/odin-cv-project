@@ -1,4 +1,4 @@
-import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
+import { Button, Label, Modal, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 
 export default function AddUserModal() {
@@ -6,8 +6,12 @@ export default function AddUserModal() {
   return (
     <>
       <React.Fragment>
-        <Button outline={true}
-      gradientDuoTone="greenToBlue" onClick={() => setShowModal(true)}>+ Add your Info</Button>
+        <Button
+          outline={true}
+          gradientDuoTone="greenToBlue"
+          onClick={() => setShowModal(true)}>
+          + Add your Info
+        </Button>
         {showModal ? (
           <Modal
             show={true}
@@ -46,12 +50,12 @@ export default function AddUserModal() {
                   </div>
                   <TextInput id="phone" type="phone" required={true} />
                 </div>
-                
+
                 <div className="w-full">
-                  <Button outline={true}
-      gradientDuoTone="greenToBlue">Submit</Button>
+                  <Button outline={true} gradientDuoTone="greenToBlue">
+                    Submit
+                  </Button>
                 </div>
-                
               </div>
             </Modal.Body>
           </Modal>

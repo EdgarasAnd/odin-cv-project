@@ -4,13 +4,22 @@ import "./index.css";
 import App from "./App";
 import Navigation from "./components/Navigation";
 import UserProfileCard from "./components/UserProfileCard";
+import EducationTimeline from "./components/EducationTimeLine";
+import JobsTimeline from "./components/JobsTimeLine";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    
-    <Navigation />
-    <UserProfileCard />
-    <App />
-  </React.StrictMode>
+  <body className="h-screen	 dark:bg-gray-800">
+    <React.StrictMode>
+      <div className="container ">
+        <Navigation />
+        <UserProfileCard />
+        <App />
+        <div className="columns-2">
+          <EducationTimeline />
+          <JobsTimeline />
+        </div>
+      </div>
+    </React.StrictMode>
+  </body>
 );

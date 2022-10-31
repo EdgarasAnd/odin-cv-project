@@ -1,4 +1,4 @@
-import { Card, Dropdown } from "flowbite-react";
+import { Card, Dropdown, Avatar } from "flowbite-react";
 
 export default function UserProfileCard() {
   return (
@@ -6,10 +6,11 @@ export default function UserProfileCard() {
       <div className="m-1">
         <Card>
           <div className="flex items-center justify-between">
-            <img
-              className="mb-3 h-24 w-24 rounded-full shadow-lg"
-              src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
-              alt="Bonnie image"
+            <Avatar
+              size="xl"
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              rounded={true}
+              bordered={true}
             />
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
               Bonnie Green
@@ -20,25 +21,25 @@ export default function UserProfileCard() {
             <div className="flex justify-end px-4 pt-4">
               <Dropdown inline={false} label="Edit">
                 <Dropdown.Item>
-                  <a
+                  <p
                     href="#"
                     className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">
                     Edit
-                  </a>
+                  </p>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  <a
+                  <p
                     href="#"
                     className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">
                     Delete
-                  </a>
+                  </p>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  <a
+                  <p
                     href="#"
                     className="block py-2 px-4 text-sm text-red-600 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white">
                     Refresh
-                  </a>
+                  </p>
                 </Dropdown.Item>
               </Dropdown>
             </div>
