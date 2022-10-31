@@ -6,7 +6,8 @@ export default function AddUserModal() {
   return (
     <>
       <React.Fragment>
-        <Button onClick={() => setShowModal(true)}>+ Add your Info</Button>
+        <Button outline={true}
+      gradientDuoTone="greenToBlue" onClick={() => setShowModal(true)}>+ Add your Info</Button>
         {showModal ? (
           <Modal
             show={true}
@@ -47,7 +48,8 @@ export default function AddUserModal() {
                 </div>
                 
                 <div className="w-full">
-                  <Button>Submit</Button>
+                  <Button outline={true}
+      gradientDuoTone="greenToBlue">Submit</Button>
                 </div>
                 
               </div>
