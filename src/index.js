@@ -9,7 +9,7 @@ import JobsTimeline from "./components/JobsTimeLine";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <body className="h-screen	 dark:bg-gray-800">
+  <div className="h-screen	 dark:bg-gray-800">
     <React.StrictMode>
       <div className="container ">
         <Navigation />
@@ -21,5 +21,5 @@ root.render(
         </div>
       </div>
     </React.StrictMode>
-  </body>
+  </div>
 );

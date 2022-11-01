@@ -1,23 +1,40 @@
 import { Card, Dropdown, Avatar } from "flowbite-react";
+import AddUserModal from "./AddUserModal";
+
+export const UserInitialData = [
+  {
+    profilePicture: '',
+    firstName: '',
+    secondName: '',
+    occupation: '',
+    phoneNumber: '',
+    email: '',
+  },
+];
 
 export default function UserProfileCard() {
+  
+
   return (
     <>
       <div className="m-1">
         <Card>
           <div className="flex items-center justify-between">
-            <Avatar
-              size="xl"
-              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              rounded={true}
-              bordered={true}
-            />
-            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-              Bonnie Green
+            <Avatar size="xl" img={AddUserModal.profilePicture} rounded={true} bordered={true} />
+            <h5 className="text-center mb-1 text-xl font-medium text-gray-900 dark:text-white">
+              {AddUserModal.firstName} <br></br> {AddUserModal.secondName}
             </h5>
-            <span className="text-sm text-gray-500 dark:text-gray-400">
-              Visual Designer
-            </span>
+            <div className="flex flex-col text-center">
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+              {AddUserModal.occupation}
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+              {AddUserModal.phoneNumber}
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+              {AddUserModal.email}
+              </span>
+            </div>
             <div className="flex justify-end px-4 pt-4">
               <Dropdown inline={false} label="Edit">
                 <Dropdown.Item>

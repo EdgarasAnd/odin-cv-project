@@ -6,13 +6,20 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    ripple: theme => ({
+      colors: theme('colors')
+  }),
     container: {
       center: true,
     },
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('tailwindcss-ripple')()
 ],
 
 }
+
+
+// tailwind.config.js
